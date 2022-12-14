@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+}
+h1 {
+    font-size: 4rem;
+}
+p {
+    font-size: 3rem;
+}
+
+.container{
+    margin-bottom: 30px;
+}
+
+#input{
+    height: 2.5remrem;
+    width: 35rem;
+    padding: 8px;
+    outline: none;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.image_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img{
+    height: 10rem;
+    width: 10rem;
+}
