@@ -1,0 +1,23 @@
+button{
+    padding: 10px;
+    margin: 10px;
+    position: fixed;
+    right: 2rem;
+    top: 10px;
+    background-color: silver;
+    color: black;
+    
+    outline: none;
+   
+    
+    font-size: 20px;
+}
+    
+
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin: 20px;
+}
