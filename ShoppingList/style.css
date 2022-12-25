@@ -1,0 +1,22 @@
+
+      body {
+        text-align: center;
+      }
+
+      .list-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        gap: 10px;
+      }
+      .list-li{
+       
+        width: 140px;
+       
+      }
+
+      .list-li label{
+        margin-right: 30px;
+      }
+    
