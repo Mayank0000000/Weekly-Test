@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    border: 1px solid black;
+    height: 40px;
+    
+    list-style-type: none;
+    width: 150px;
+    text-align: center;
+   
+}
+
+.child{
+    display: flex;
+    flex-direction: column;
+  gap: 15px;
+    align-items: center;
+    
+}
+div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
