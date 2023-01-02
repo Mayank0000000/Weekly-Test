@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 403-01</title>
+  </head>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      height: 100vh;
+    }
+    .container h1{
+      display: inline-block;
+      padding: 20px;
+      font-size: xxx-large;
+      
+      box-shadow: 2px 2px 5px 2px  rgba(128, 128, 128, 0.413);
+    }
+    .container h2{
+      display: none;
+      padding: 40px;
+      font-size: xxx-large;
+      
+      box-shadow: 2px 2px 5px 2px   rgba(128, 128, 128, 0.413);
+    }
+  </style>
+  <body>
+      <div class="container">
+        <h1>Press any keyboard key</h1>
+      </div>
+      <div class="container">
+        <h2></h2>
+      </div>
+
+      <script>
+        const container = document.getElementsByClassName('container')[0];
+        const h1 = document.getElementsByTagName('h1')[0];
+        const h2 = document.getElementsByTagName('h2')[0];
+
+          
+
+        document.addEventListener('keypress', (e) => {
+
+            h1.innerHTML = `You pressed `;
+            h2.style.display = 'inline-block'
+
+            const label = document.createElement('label');
+            label.innerHTML = e.key;
+            label.style.color = 'green';
+            h1.append(label);
+           
+            h2.innerHTML = e.keyCode;
+            h2.style.color = 'green';
+        })
+        
+      </script>
+  </body>
+</html>
