@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #image-slider {
+      width: 800px;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #image-slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    #previous {
+        width: 150px;
+      height: 60px;
+      background-color: red;
+      color: white;
+      font-size: 2rem;
+    }
+    #next {
+        width: 150px;
+      height: 60px;
+      background-color: red;
+      color: white;
+      font-size: 2rem;
+
+    }
+
+    #image-slider img.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-slider">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+  </div>
+  <button id="previous">Previous</button>
+  <button id="next">Next</button>
+  <script>
+    const imageSlider = document.getElementById("image-slider");
+    const images = imageSlider.getElementsByTagName("img");
+    let current = 0;
+
+    function next() {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }
+
+    function previous() {
+      images[current].classList.remove("active");
+      current = (current - 1 + images.length) % images.length;
+      images[current].classList.add("active");
+    }
+
+    document.getElementById("next").addEventListener("click", next);
+    document.getElementById("previous").addEventListener("click", previous);
+  </script>
+</body>
+</html>
